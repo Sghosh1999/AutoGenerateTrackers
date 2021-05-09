@@ -13,7 +13,7 @@
 2. Automatically handels 'Holiday','Leave','Sick' phrases.
 3. Text Wrapping is handled and New line is applied in the weekly and monthly tracker.
 4. Most detailed possible weekly & monthly trackers.
-5. Helps before Sri's meeting. ( Takes ~ 1 sec to generate)
+5. It can Generate Function wise Group weekly as well as monthly trackers.
 
 
 ## Installation

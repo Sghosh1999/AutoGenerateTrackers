@@ -144,7 +144,7 @@ class TrackerGenerator:
         # modifyng output by style - wrap
         workbook = writer.book
         worksheet = writer.sheets['Sheet1']
-        wrap_format = workbook.add_format({'text_wrap': True})
+        wrap_format = workbook.add_format({'text_wrap': True,'bold': True})
 
         # dictionary for map position of selected columns to excel headers
         d = dict(zip(range(26), list(string.ascii_uppercase)))
@@ -160,8 +160,10 @@ class TrackerGenerator:
             # map by dict to format like "A:A"
             excel_header = d[col] + ':' + d[col]
             # None means not set with
-            worksheet.set_column(excel_header, None, wrap_format)
+            #worksheet.set_column(excel_header, None, wrap_format)
             # for with = 20
-            #worksheet.set_column(excel_header, 20, wrap_format)
+            #worksheet.set_row(excel_header, 150, wrap_format)
+            worksheet.set_column(excel_header, 550, wrap_format)
         # writer.Columns.AutoFit()
+        
         writer.save()
