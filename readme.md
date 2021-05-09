@@ -27,7 +27,7 @@ $python -m pip install -r requirements.txt
 ## Running
 
 ```python
-$streamlit run generatetracker.py
+$streamlit run app.py
 ```
 
 Enjoy!!
