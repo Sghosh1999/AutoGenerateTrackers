@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import timedelta, date
 import string
-import os
+import os,re
 
 
 class TrackerGenerator:
@@ -48,6 +48,10 @@ class TrackerGenerator:
                 try:
                     task_name = (
                         daily_tracker[daily_tracker['Start Date'] == i].Task.values[0]).replace("\n", "")
+                    
+                    pattern = r'\d.'
+                    for ij in re.findall(pattern,task_name):
+                        task_name = task_name.replace(ij,'')
                     month_task_list.append(task_name)
                 except:
                     pass
@@ -104,9 +108,9 @@ class TrackerGenerator:
                 try:
                     task_name = (
                         daily_tracker[daily_tracker['Start Date'] == i].Task.values[0]).replace("\n", "")
-#                     pattern = r'\d.'
-#                     for i in re.findall(pattern,task_name):
-#                         task_name = task_name.replace(i,'')
+                    pattern = r'\d.'
+                    for ij in re.findall(pattern,task_name):
+                        task_name = task_name.replace(ij,'')
 
                     week_task_list.append(task_name)
 
@@ -124,7 +128,7 @@ class TrackerGenerator:
                 field_val = field_val + str(line) + '.' + str(vals) + '\n'
                 line = line+1
 
-            print(field_val)
+            #print(field_val)
             weekly_task['Week'+str(a)] = field_val
             a = a+1
             start_date = week_end
@@ -154,8 +158,8 @@ class TrackerGenerator:
          17: 'R', 18: 'S', 19: 'T', 20: 'U', 21: 'V', 22: 'W', 23: 'X', 24: 'Y', 25: 'Z'}
 
         # get positions of columns
-        print(cols_for_wrap)
-        print(df.columns.get_indexer(cols_for_wrap))
+        #print(cols_for_wrap)
+        #print(df.columns.get_indexer(cols_for_wrap))
         for col in df.columns.get_indexer(cols_for_wrap):
             # map by dict to format like "A:A"
             excel_header = d[col] + ':' + d[col]
