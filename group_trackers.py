@@ -32,8 +32,11 @@ def main():
             try:
                 uploaded_file = col2.file_uploader("Upload the Daily Trcakers as serially as Names", key=i, type=[
                     'csv', 'xlsx', 'xlsm'], accept_multiple_files=False)
-                uploaded_data_read = pd.read_excel(
-                    uploaded_file, engine='openpyxl')
+                if uploaded_file.name.split('.')[1] == 'csv':
+                    uploaded_data_read = pd.read_csv(uploaded_file)
+                else:
+                    uploaded_data_read = pd.read_excel(uploaded_file, engine='openpyxl')
+                
                 week_tracker = pd.DataFrame(
                     obj1.weekly_tracker_generator(uploaded_data_read, user_input))
                 month_tracker = pd.DataFrame(

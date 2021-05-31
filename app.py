@@ -15,7 +15,7 @@ def main():
     choice = st.sidebar.selectbox("Choose Activity", activities)
 
     if choice == "Home":
-        st.title("Automatic Tracker Generator :sunglasses:")
+        st.title("Dailt Trcaker ++ :sunglasses:")
         
     if choice == "Generate Daily Trackers":
         daily_gen.main()
