@@ -10,7 +10,7 @@
 ## Description
 This is a automatic Tracker generation Web Application which can generate daily, weekly and monthly trackers. It has been enhanced to generate group level trackers also.
 
-## Usecase 1 : Daily Trcaker Generation :smiley:
+# Usecase 1 : Daily Trcaker Generation :heart_eyes:
 In this use case, user can generate his daily tracker for a **single day as well as multiple days** (*In case he/she forgot to fill daily*).
 
 ## Features
@@ -23,7 +23,7 @@ In this use case, user can generate his daily tracker for a **single day as well
 
 ![Application Demo](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif)
 
-## Usecase 2 : Weekly & Monthly  Generation :smiley:
+# Usecase 2 : Weekly & Monthly  Generation :heart_eyes:
 In this use case, user can generate his **weekly as well as monthly tracker** by giving his daily tracker as Input. Not only that, if a users want to generate **group weekly trackers and group monthly trackers** he can also do that by giving the users daily trackers.
 ## Features
 
