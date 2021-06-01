@@ -72,7 +72,7 @@ This section should list any major frameworks that we have used to build the app
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started :robot:
 
 In this section, A whole installation guide is mentioned. also trouble shooting guide is also given.
 
