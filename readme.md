@@ -4,9 +4,15 @@
 
 > The fastest way to build **Daily, Weekly & Monthly Trackres**! Powered by **Python**!
 
+
 ## Description
 
 This is a automatic Tracker generation Web Application which can generate daily, weekly and monthly trackers. It has been enhanced to generate group level trackers also.
+
+
+Multiuser Weekly & Monthly Trcaker Generator             |  Daily Tracker Generator |
+:-------------------------:|:-------------------------: |
+![](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/da2d8f24090a6ec12cfe3a8b715704887987eae8/demos/a.jpg)  |  ![](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/da2d8f24090a6ec12cfe3a8b715704887987eae8/demos/b.jpg) |
 
 # Usecase 1 : Daily Trcaker Generation :heart_eyes:
 
