@@ -1,7 +1,7 @@
 
 
 
-# Awesome Daily Tracker ++ [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/MarcSkovMadsen/awesome-streamlit)
+# *Awesome* Daily Tracker ++ [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/MarcSkovMadsen/awesome-streamlit)
 
 [<img src="https://media.istockphoto.com/vectors/unique-modern-creative-elegant-letter-d-based-vector-icon-logo-vector-id1125625274?k=6&m=1125625274&s=612x612&w=0&h=U-fRNFEEezcFQ5M8EPjiqUTiqvhHt3lUN2s9CbaVX94=" align="right" height="75" width="75">](https://streamlit.io)
 
@@ -20,8 +20,9 @@ In this use case, user can generate his daily tracker for a **single day as well
 * User need to give **Start date and end date** in order o fill up the tasks.
 
 ### Application Demo
-
-![Application Demo](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif)
+<p align="center">
+  <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif" alt="animated" />
+</p>
 
 # Usecase 2 : Weekly & Monthly  Generation :heart_eyes:
 In this use case, user can generate his **weekly as well as monthly tracker** by giving his daily tracker as Input. Not only that, if a users want to generate **group weekly trackers and group monthly trackers** he can also do that by giving the users daily trackers.
@@ -45,7 +46,9 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 
 ![Application Demo](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif)
 
-### Built With
+----
+
+## Built With
 
 This section should list any major frameworks that we have used to build the application. 
 * [Python](https://www.python.org/)
