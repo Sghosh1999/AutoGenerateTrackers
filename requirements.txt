@@ -63,6 +63,7 @@ pywin32==300
 pywinpty==1.0.1
 pyzmq==22.0.3
 requests==2.25.1
+secure-smtplib==0.1.1
 Send2Trash==1.5.0
 six==1.16.0
 smmap==4.0.0
