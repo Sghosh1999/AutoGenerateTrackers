@@ -70,19 +70,19 @@ This section should list any major frameworks that we have used to build the app
 * [Streamlit](https://streamlit.io/)
 
 
-
+----
 <!-- GETTING STARTED -->
 ## Getting Started :robot:
 
 In this section, A whole installation guide is mentioned. also trouble shooting guide is also given.
 
-### Prerequisites
+## Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * Python ( Version 3.8.5)
 * Streamlit (0.82.0)
 
-### Installation
+## Installation
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
