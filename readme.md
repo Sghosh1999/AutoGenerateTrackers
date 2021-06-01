@@ -33,6 +33,7 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 * Unnecessary phrases **( Holiday, Leave) is excluded**.
 * **Text Wrapping of the csv** file is handled. **Proper Orientation** is handled.
 * **Null value exception** is handled.
+* It supports both **single user** and **multi user** purposes.
 * Ex ( Group weekly Trackers): 
 
 | Name | Week 1 | Week 2 | ... | Week n |
