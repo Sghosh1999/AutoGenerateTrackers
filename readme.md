@@ -42,6 +42,15 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 |...  | ...  | ... | ... | ... |
 |Person n  | 1. Completed Task n  | 1. Task n | ... | 1. Task n |
 
+----
+<!-- 
+### Application Dem
+| Single User |Multiple User |
+|--|--|
+|<img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/78abe5fbcf58ed1054bbfc28e3b3029ba6835384/demos/week_month_demo1.gif" alt="animated" />|<img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/ad55ed7d7e4aecf078b2c512f85cff2494479392/demos/multi_user_demo.gif" alt="animated" />|
+ -->
+
+
 ### Application Demo (Single User)
 <p align="center">
   <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/78abe5fbcf58ed1054bbfc28e3b3029ba6835384/demos/week_month_demo1.gif" alt="animated" />
@@ -49,7 +58,7 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 
 ### Application Demo (Multiple User)
 <p align="center">
-  <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/78abe5fbcf58ed1054bbfc28e3b3029ba6835384/demos/week_month_demo1.gif" alt="animated" />
+  <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/ad55ed7d7e4aecf078b2c512f85cff2494479392/demos/multi_user_demo.gif" alt="animated" />
 </p>
 
 ----
@@ -65,16 +74,13 @@ This section should list any major frameworks that we have used to build the app
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+In this section, A whole installation guide is mentioned. also trouble shooting guide is also given.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Python ( Version 3.8.5)
+* Streamlit (0.82.0)
 
 ### Installation
 
