@@ -43,8 +43,9 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 |Person n  | 1. Completed Task n  | 1. Task n | ... | 1. Task n |
 
 ### Application Demo
-
-![Application Demo](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif)
+<p align="center">
+  <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/78abe5fbcf58ed1054bbfc28e3b3029ba6835384/demos/week_month_demo1.gif" alt="animated" />
+</p>
 
 ----
 
