@@ -7,6 +7,7 @@ import pandas as pd
 import datetime
 import sqlite3
 import smtplib
+import os, glob
 
 
 st.title("Automatic trcaker Generation :sunglasses:")
@@ -113,12 +114,44 @@ def main():
 
         data = dict(zip(dates, tasks))
         # st.write(data)
-
+        i=0
         dataset = pd.DataFrame(data.items(), columns=['Start Date', 'Tasks'])
-        st.dataframe(dataset)
+        dataset.to_csv("tracker"+str(i)+".csv",index=False)
+        i+1
+        
+        
+        
+        
+        #Getting the previous files
+        path = os.getcwd()
+        csv_files = glob.glob(os.path.join(path, "*.csv"))
+        
+        dal_trackers = list()
+        
+        # loop over the list of csv files
+        for f in csv_files:
+            
+            # read the csv file
+            df = pd.read_csv(f)
+            dal_trackers.append(df)
+
+        try:   
+            dataset = pd.concat(data for data in dal_trackers)
+            dataset["Start Date"] = pd.to_datetime(dataset["Start Date"])
+            dataset = dataset.sort_values(by="Start Date")
+            dataset.drop_duplicates(subset ="Start Date",
+                     keep = False, inplace = True)
+
+            st.dataframe(dataset)
+        except:
+            pass
+
 
         if c7.button("Submit"):
-            csv_exporter(dataset, name_user)
+            
+            dataset.to_csv(name_user+"'s_Final_daily_tracker.csv",index=False)
+            #csv_exporter(dataset, name_user)
+            st.success("latest Daily tracker is generated in the same folder location")
 
             create_user(email, dates[-1])   #dates[-1] contains the last element of the list of the dates. i.e, the last date or the end date.
 
