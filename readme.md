@@ -103,6 +103,9 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    git clone https://github.com/Sghosh1999/AutoGenerateTrackers.git
    ```
+   
+**Open Command prompt and navigate to the folder(AutoGenerateTrackers)
+
 2. Create a Virtual Python environment
    ```python
    > python -m virtualenv myenv
