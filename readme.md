@@ -142,4 +142,4 @@ python -m streamlit run app.py
 * In the ***demo_trackers folder*** go to ***multi_user_trackers***. In the ***input_files*** there are 2 sample daily trackers. You can use it to test the group weekly and monthly Trackers
 * In the ***output_files*** the output files are present.
 
-### Built with :heart:
+### Built with :heart: by Team 8 ( Droid )
