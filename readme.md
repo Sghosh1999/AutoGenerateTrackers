@@ -108,22 +108,22 @@ This is an example of how to list things you need to use the software and how to
 
 2. Create a Virtual Python environment
    ```python
-   > python -m virtualenv myenv
+   python -m virtualenv myenv
    ```
 3. Activate the Virtual environment
    ```python
-   > myenv\scripts\activate
+   myenv\scripts\activate
    ```
 4. Install necessary packages
    ```sh
    python -m pip install -r requirements.txt
    python -m pip install openpyxl
    ```
-5. Check if these two packages are installed or not:
+5. Check if these two packages are installed or not: (optional)
    ```sh
    python -m streamlit --version
    ```
-   If streamlit is not recognized, then run the command
+   If streamlit is not recognized, then run the command (optional)
 
 ```sh
   python -m pip install streamlit
@@ -132,7 +132,7 @@ This is an example of how to list things you need to use the software and how to
 ## Running the Application
 
 ```python
-$python -m streamlit run app.py
+python -m streamlit run app.py
 ```
 
 - For the first time it will ask you for the email. Please provide the email and the application will be open in your browser.
