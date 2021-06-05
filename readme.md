@@ -101,7 +101,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Sghosh1999/fuzzy_search.git
+   git clone https://github.com/Sghosh1999/AutoGenerateTrackers.git
    ```
 2. Create a Virtual Python environment
    ```python
@@ -114,6 +114,7 @@ This is an example of how to list things you need to use the software and how to
 4. Install necessary packages
    ```sh
    python -m pip install -r requirements.txt
+   python -m pip install openpyxl
    ```
 5. Check if these two packages are installed or not:
    ```sh
