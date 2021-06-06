@@ -4,6 +4,20 @@
 
 > The fastest way to build **Daily, Weekly & Monthly Trackres**! Powered by **Python**!
 
+### Table of Contents  
+* [Description](#description)
+* [Usecase 1: Daily tracker Generation](#usecase1)
+    * [Features](#feat1)
+    * [Application Demo](#demo1)
+* [Usecase 2: Weekly & Monthly Generation](#usecase2)
+    * [Features](#feat2)
+    * [Application Demo](#demo2)
+* [Prerequisites](#prerq)
+* [Installation Guide](#guide)  
+  
+----
+
+<a name="description"/>
 
 ## Description
 
@@ -14,9 +28,13 @@ Multiuser Weekly & Monthly Trcaker Generator             |  Daily Tracker Genera
 :-------------------------:|:-------------------------: |
 ![](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/da2d8f24090a6ec12cfe3a8b715704887987eae8/demos/a.jpg)  |  ![](https://github.com/Sghosh1999/AutoGenerateTrackers/blob/da2d8f24090a6ec12cfe3a8b715704887987eae8/demos/b.jpg) |
 
+<a name="usecase1"/>
+
 # Usecase 1 : Daily Trcaker Generation :heart_eyes:
 
 In this use case, user can generate his daily tracker for a **single day as well as multiple days** (_In case he/she forgot to fill daily_).
+
+<a name="feat1"/>
 
 ## Features
 
@@ -24,15 +42,21 @@ In this use case, user can generate his daily tracker for a **single day as well
 - If a user is not filling his daily tracker for consecutive two days , **an email notification will be sent** to the given email-address.
 - User need to give **Start date and end date** in order o fill up the tasks.
 
+<a name="demo1"/>
+
 ### Application Demo
 
 <p align="center">
   <img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/49d6ce9efecaf581b7227c97dc5d3c6f3d24ef75/demos/daily_trcaker_demo.gif" alt="animated" />
 </p>
 
+<a name="usecase2"/>
+
 # Usecase 2 : Weekly & Monthly Generation :heart_eyes:
 
 In this use case, user can generate his **weekly as well as monthly tracker** by giving his daily tracker as Input. Not only that, if a users want to generate **group weekly trackers and group monthly trackers** he can also do that by giving the users daily trackers.
+
+<a name="feat2"/>
 
 ## Features
 
@@ -59,6 +83,8 @@ In this use case, user can generate his **weekly as well as monthly tracker** by
 |--|--|
 |<img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/78abe5fbcf58ed1054bbfc28e3b3029ba6835384/demos/week_month_demo1.gif" alt="animated" />|<img src="https://github.com/Sghosh1999/AutoGenerateTrackers/blob/ad55ed7d7e4aecf078b2c512f85cff2494479392/demos/multi_user_demo.gif" alt="animated" />|
  -->
+
+<a name="demo2"/>
 
 ### Application Demo (Single User)
 
@@ -89,13 +115,16 @@ This section should list any major frameworks that we have used to build the app
 
 In this section, A whole installation guide is mentioned. also trouble shooting guide is also given.
 
+<a name="prerq"/>
+
 ## Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 
 - Python ( Version 3.8.5)
-- Streamlit (0.82.0)
 - Git
+
+<a name="guide"/>
 
 ## Installation
 
@@ -105,6 +134,9 @@ This is an example of how to list things you need to use the software and how to
    ```
    
 **Open Command prompt and navigate to the folder(AutoGenerateTrackers)
+    ```
+    cd AutoGenerateTrackers
+    ```
 
 2. Create a Virtual Python environment
    ```python
