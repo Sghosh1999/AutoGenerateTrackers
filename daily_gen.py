@@ -38,10 +38,10 @@ def main():
 
             last_update_date = pd.to_datetime(date_i)
             day_gap_user = (curr_date - last_update_date).days
-            st.write(last_update_date, email_i, day_gap_user)
+#             st.write(last_update_date, email_i, day_gap_user)
             if day_gap_user >= day_i:
                 send_mail(email_i)
-                st.write("mail sent to ", email_i)
+#                 st.write("mail sent to ", email_i)
 
         cursor2 = conn.cursor()
 
@@ -115,7 +115,7 @@ def main():
         data = dict(zip(dates, tasks))
         # st.write(data)
         i=0
-        dataset = pd.DataFrame(data.items(), columns=['Start Date', 'Tasks'])
+        dataset = pd.DataFrame(data.items(), columns=['Start Date', 'Task'])
         dataset.to_csv("tracker"+str(i)+".csv",index=False)
         i+1
         
