@@ -108,6 +108,7 @@ This is an example of how to list things you need to use the software and how to
 
 2. Create a Virtual Python environment
    ```python
+   python -m pip install virtualenv
    python -m virtualenv myenv
    ```
 3. Activate the Virtual environment
