@@ -140,7 +140,7 @@ def main():
             dataset["Start Date"] = pd.to_datetime(dataset["Start Date"])
             dataset = dataset.sort_values(by="Start Date")
             dataset.drop_duplicates(subset ="Start Date",
-                     keep = False, inplace = True)
+                     keep = 'last', inplace = True)
 
             st.dataframe(dataset)
         except:
