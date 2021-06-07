@@ -19,6 +19,7 @@ def main():
     database_path = "users.db"
 
     def add_task(name, date, task):
+        name = name.upper()
         conn=sqlite3.connect(database_path)
         cursor=conn.cursor()
         cursor.execute("""INSERT INTO TASKS (NAME, DATE, TASK) VALUES (?, ?,?)""",[name, date, task])
@@ -182,11 +183,13 @@ def main():
             
             conn = sqlite3.connect(database_path)
             cursor = conn.cursor()
-            cursor.execute("SELECT * FROM TASKS")
+            temp_name = name_user.upper()
+            query = "SELECT * FROM TASKS WHERE NAME = '" + temp_name + "';"
+            cursor.execute(query)
             data_data = cursor.fetchall()
             dd_dd = pd.DataFrame(data_data)  ######
 
-            st.write(dd_dd.iloc[0][0])
+            #st.write(dd_dd.iloc[0][0])
             dd_dd = dd_dd.iloc[:,1:]
             dd_dd.columns =['Start Date', 'Task']
             dd_dd["Start Date"] = pd.to_datetime(dd_dd["Start Date"])
