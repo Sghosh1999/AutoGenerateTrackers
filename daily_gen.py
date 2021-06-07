@@ -7,7 +7,7 @@ import pandas as pd
 import datetime
 import sqlite3
 import smtplib
-import os, glob
+import os
 
 
 st.title("Automatic trcaker Generation :sunglasses:")
