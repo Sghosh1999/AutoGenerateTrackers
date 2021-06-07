@@ -2,7 +2,7 @@
 
 [<img src="https://media.istockphoto.com/vectors/unique-modern-creative-elegant-letter-d-based-vector-icon-logo-vector-id1125625274?k=6&m=1125625274&s=612x612&w=0&h=U-fRNFEEezcFQ5M8EPjiqUTiqvhHt3lUN2s9CbaVX94=" align="right" height="75" width="75">](https://streamlit.io)
 
-> The fastest way to build **Daily, Weekly & Monthly Trackres**! Powered by **Python**!
+> The fastest way to build **Daily, Weekly & Monthly Trackers**! Powered by **Python**!
 
 ### Table of Contents  
 * [Description](#description)
