@@ -15,8 +15,15 @@ st.title("Automatic trcaker Generation :sunglasses:")
 
 def main():
 
-    obj1 = TrackerGenerator()
+    #obj1 = TrackerGenerator()
     database_path = "users.db"
+
+    def add_task(name, date, task):
+        conn=sqlite3.connect(database_path)
+        cursor=conn.cursor()
+        cursor.execute("""INSERT INTO TASKS (NAME, DATE, TASK) VALUES (?, ?,?)""",[name, date, task])
+        conn.commit()
+        conn.close()
 
     def send_mail(email, massage="you have not submitted in last 2 days"):
         server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
@@ -67,7 +74,7 @@ def main():
     def csv_exporter(data, flag):
         csvfile = data.to_csv(index=False)
         b64 = base64.b64encode(csvfile.encode()).decode()
-        new_filename = "{}_tracker.csv".format(flag)
+        new_filename = "{}_daily_tracker.csv".format(flag)
         st.markdown("### Downloaf File ###")
         href = f'<a href="data:file/csv;base64,{b64}" download="{new_filename}">Click Here!!</a>'
         st.markdown(href, unsafe_allow_html=True)
@@ -114,44 +121,44 @@ def main():
 
         data = dict(zip(dates, tasks))
         # st.write(data)
-        i=0
-        dataset = pd.DataFrame(data.items(), columns=['Start Date', 'Task'])
-        dataset.to_csv("tracker"+str(i)+".csv",index=False)
-        i+1
+        # i=0
+        # dataset = pd.DataFrame(data.items(), columns=['Start Date', 'Task'])
+        # dataset.to_csv("tracker"+str(i)+".csv",index=False)
+        # i+1
         
         
         
         
         #Getting the previous files
-        path = os.getcwd()
-        csv_files = glob.glob(os.path.join(path, "*.csv"))
+        # path = os.getcwd()
+        # csv_files = glob.glob(os.path.join(path, "*.csv"))
         
-        dal_trackers = list()
+        # dal_trackers = list()
         
-        # loop over the list of csv files
-        for f in csv_files:
+        # # loop over the list of csv files
+        # for f in csv_files:
             
-            # read the csv file
-            df = pd.read_csv(f)
-            dal_trackers.append(df)
+        #     # read the csv file
+        #     df = pd.read_csv(f)
+        #     dal_trackers.append(df)
 
-        try:   
-            dataset = pd.concat(data for data in dal_trackers)
-            dataset["Start Date"] = pd.to_datetime(dataset["Start Date"])
-            dataset = dataset.sort_values(by="Start Date")
-            dataset.drop_duplicates(subset ="Start Date",
-                     keep = 'last', inplace = True)
+        # try:   
+        #     dataset = pd.concat(data for data in dal_trackers)
+        #     dataset["Start Date"] = pd.to_datetime(dataset["Start Date"])
+        #     dataset = dataset.sort_values(by="Start Date")
+        #     dataset.drop_duplicates(subset ="Start Date",
+        #              keep = 'last', inplace = True)
 
-            st.dataframe(dataset)
-        except:
-            pass
+        #     st.dataframe(dataset)
+        # except:
+        #     pass
 
 
         if c7.button("Submit"):
             
-            dataset.to_csv(name_user+"'s_Final_daily_tracker.csv",index=False)
+            #dataset.to_csv(name_user+"'s_Final_daily_tracker.csv",index=False)
             #csv_exporter(dataset, name_user)
-            st.success("latest Daily tracker is generated in the same folder location")
+            st.success("Generating Daily Trackers. Please wait!!")
 
             create_user(email, dates[-1])   #dates[-1] contains the last element of the list of the dates. i.e, the last date or the end date.
 
@@ -169,6 +176,29 @@ def main():
                 st.write("Updated today already")
             else:
                 check_and_send()
+
+            for i in range(len(dates)):
+                add_task(name_user, dates[i],tasks[i])
+            
+            conn = sqlite3.connect(database_path)
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM TASKS")
+            data_data = cursor.fetchall()
+            dd_dd = pd.DataFrame(data_data)  ######
+
+            st.write(dd_dd.iloc[0][0])
+            dd_dd = dd_dd.iloc[:,1:]
+            dd_dd.columns =['Start Date', 'Task']
+            dd_dd["Start Date"] = pd.to_datetime(dd_dd["Start Date"])
+            dd_dd = dd_dd.sort_values(by="Start Date")
+            dd_dd.drop_duplicates(subset ="Start Date",
+                      keep = 'last', inplace = True)
+            
+            st.dataframe(dd_dd)
+            csv_exporter(dd_dd, name_user)
+
+            st.success("Please click on Click here to download it.!!")
+
 
     generate_weekly_trackers_multiuser()
 

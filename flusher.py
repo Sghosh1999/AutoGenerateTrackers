@@ -3,10 +3,11 @@
 import sqlite3
 import datetime
 conn = sqlite3.connect('users.db')
-# try:
-#     conn.execute('''DROP TABLE USERS;''')
-# except:
-#     pass
+try:
+    conn.execute('''DROP TABLE USERS;''')
+    conn.execute('''DROP TABLE TASKS;''')
+except:
+    pass
 
 conn.execute('''CREATE TABLE USERS
  ( EMAIL   TEXT  PRIMARY KEY    NOT NULL,
@@ -14,6 +15,10 @@ conn.execute('''CREATE TABLE USERS
  DAY_GAP INT
  
  );''')
+
+
+conn.execute('''CREATE TABLE TASKS (NAME TEXT NOT NULL , DATE TEXT NOT NULL, TASK TEXT );''')
+
 
 cursor = conn.cursor()
 
